@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+openai
+python-dotenv
+
+# TO RUN THE APPLICATION
+# uvicorn app.main:app --reload 
