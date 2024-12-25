@@ -12,6 +12,6 @@ async def summarize_reviews_endpoint(request: ReviewsSummarizerRequest):
     """
     try:
         summary = summarize_reviews(request.reviews)
-        return {"summary": summary}
+        return summary
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

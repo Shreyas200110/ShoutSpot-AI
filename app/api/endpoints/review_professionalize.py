@@ -10,7 +10,7 @@ async def professionalize_review_endpoint(request: ProfessionalizeRequest):
     Endpoint to professionalize a review text.
     """
     try:
-        professionalized_text = professionalize_review(request.reviewText)
-        return {"originalText": request.reviewText, "professionalizedText": professionalized_text}
+        professionalized_response = professionalize_review(request.reviewText)
+        return professionalized_response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
