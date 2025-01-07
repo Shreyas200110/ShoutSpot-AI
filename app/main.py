@@ -5,8 +5,7 @@ from app.api.endpoints import detect_spam_and_analyze_sentiment, review_professi
 app = FastAPI(title="ShoutSpot AI", version="1.0.0")
 
 origins = [
-    "http://localhost:5173",
-    "https://your-frontend-domain.com",
+    "*"
 ]
 
 app.add_middleware(
